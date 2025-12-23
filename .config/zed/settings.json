@@ -7,47 +7,61 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "features": {
+    "edit_prediction_provider": "copilot",
+  },
+  "preview_tabs": {
+    "enabled": false,
+  },
+  "use_system_window_tabs": false,
   "buffer_font_family": "MesloLGS Nerd Font Mono",
   "title_bar": {
-    "show_menus": false
+    "show_menus": false,
   },
   "project_panel": {
-    "button": true
+    "button": true,
   },
   "tabs": {
-    "git_status": false,
-    "file_icons": true
+    "show_diagnostics": "all",
+    "activate_on_close": "neighbour",
+    "git_status": true,
+    "file_icons": true,
   },
   "tab_bar": {
-    "show": true
+    "show_tab_bar_buttons": true,
+    "show_nav_history_buttons": false,
+    "show": true,
   },
   "git": {
     "inline_blame": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
   "minimap": {
-    "show": "never"
+    "show": "never",
   },
   "relative_line_numbers": "enabled",
   "scroll_beyond_last_line": "one_page",
   "ui_font_family": ".ZedSans",
   "terminal": {
     "font_size": 14.0,
-    "font_family": "MesloLGS Nerd Font"
+    "font_family": "MesloLGS Nerd Font",
   },
   "base_keymap": "VSCode",
   "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+  },
   "icon_theme": "Catppuccin Mocha",
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Tokyo Night"
+    "dark": "Tokyo Night",
   },
   "cursor_blink": false,
-  "scrollbar": {
-    "show": "never"
-  }
+  // "scrollbar": {
+  //   "show": "never"
+  // }
 }

@@ -7,45 +7,37 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
-      // Ctrl-h / Ctrl-l to move focus between sidebar & editor
-      "ctrl h": "project_panel::ToggleFocus",
-      "ctrl l": "editor::ToggleFocus",
-
-      // <Space> s g — search across whole project
-      "space s g": "project_search::ToggleFocus",
-
-      // <Space> t o — toggle the file tree (left sidebar)
-      "space t o": "file_finder::Toggle"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && !VimWaiting",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle"
-      // Ctrl-h / Ctrl-l to move focus between sidebar & editor
-      "ctrl h": "project_panel::ToggleFocus",
-      "ctrl l": "editor::ToggleFocus",
-
-      // <Space> s g — search across whole project
-      "space s g": "project_search::ToggleFocus",
-
-      // <Space> t o — toggle the file tree (left sidebar)
-      "space t o": "file_finder::Toggle"
-    }
+      "ctrl-h": "project_panel::ToggleFocus",
+      "ctrl-l": "editor::ToggleFocus",
+    },
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      "space s g": "search::FocusSearch"
-    }
+      "shift-k": "editor::Hover",
+      "space c a": "editor::ToggleCodeActions",
+      "space f": "editor::Format",
+      "space r n": "editor::Rename",
+      "space x x": "diagnostics::Deploy",
+      "space c d": "editor::Hover",
+      "space s f": "file_finder::Toggle",
+      "space s b": "tab_switcher::Toggle",
+      "space s g": "pane::DeploySearch",
+      "space p": "outline::Toggle",
+      "space g d": "editor::GoToDefinitionSplit",
+      "space q": "pane::CloseActiveItem",
+      "g r": "editor::FindAllReferences",
+      "g o": "editor::GoToTypeDefinition",
+      "space t n": "workspace::ToggleLeftDock",
+      "space t o": "workspace::ToggleLeftDock",
+    },
   },
   {
-    "context": "Editor && vim_mode == insert",
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
-      // "j k": "vim::NormalBefore"
-    }
-  }
+      "shift-k": "editor::MoveLineUp",
+      "shift-j": "editor::MoveLineDown",
+    },
+  },
 ]
