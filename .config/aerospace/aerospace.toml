@@ -112,12 +112,15 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # App shortcuts
-alt-t = 'exec-and-forget open -n /Applications/WezTerm.app/'
-# alt-t = "exec-and-forget open -b com.github.wez.wezterm" # WezTerm
+alt-t = "exec-and-forget open -b com.github.wez.wezterm" # WezTerm
+alt-shift-t = 'exec-and-forget open -n /Applications/WezTerm.app/'
 alt-i = "exec-and-forget open -b com.apple.systempreferences" # System Settings
 alt-b = "exec-and-forget open -b app.zen-browser.zen"         # Zen Browser
-alt-e = "exec-and-forget open -b com.apple.finder"
 alt-g = "exec-and-forget open -b com.google.Chrome"
+alt-e = "exec-and-forget open -b com.apple.finder"
+alt-c = "exec-and-forget open -b com.microsoft.VSCode" # VSCode
+alt-x = "exec-and-forget open -b com.apple.dt.Xcode" # Xcode
+alt-n = 'exec-and-forget open -b notion.id'
 alt-q = "close"
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
@@ -144,6 +147,8 @@ alt-shift-5 = [ 'move-node-to-workspace 5', 'workspace 5' ]
 alt-shift-6 = [ 'move-node-to-workspace 6', 'workspace 6' ]
 alt-shift-7 = [ 'move-node-to-workspace 7', 'workspace 7' ]
 alt-shift-8 = [ 'move-node-to-workspace 8', 'workspace 8' ]
+alt-shift-i = [ 'move-node-to-workspace i', 'workspace i' ]
+alt-shift-n = [ 'move-node-to-workspace n', 'workspace n' ]
 # alt-shift-9 = [ 'move-node-to-workspace 9', 'workspace 9' ]
 # alt-shift-a = 'move-node-to-workspace A'
 # alt-shift-b = 'move-node-to-workspace B'
@@ -151,6 +156,7 @@ alt-shift-8 = [ 'move-node-to-workspace 8', 'workspace 8' ]
 # alt-shift-d = 'move-node-to-workspace D'
 
 alt-f = 'layout tiles accordion'
+alt-shift-f = 'macos-native-fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -184,13 +190,30 @@ alt-space = 'exec-and-forget open -a "Mission Control"'
 
 # alt-v = 'exec-and-forget osascript -e "tell application \"System Events\" to key code 49 using {command down}" -e "delay 0.15" -e "tell application \"System Events\" to key code 21 using {command down}"'
 
-# [[on-window-detected]]
-# if.app-id = "com.facebook.archon"
-# run = "layout floating"
 [[on-window-detected]]
 if.app-id = "com.apple.systempreferences"
 run = "move-node-to-workspace I"
-
+[[on-window-detected]]
+if.app-id = "com.google.Chrome"
+run = "move-node-to-workspace 1"
+[[on-window-detected]]
+if.app-id = "app.zen-browser.zen"
+run = "move-node-to-workspace 1"
+[[on-window-detected]]
+if.app-id = "com.github.wez.wezterm"
+run = "move-node-to-workspace 2"
+[[on-window-detected]]
+if.app-id = "com.microsoft.VSCode"
+run = "move-node-to-workspace 3"
+[[on-window-detected]]
+if.app-id = "com.apple.iphonesimulator"
+run = ["move-node-to-workspace 3", "layout tiling"]
+[[on-window-detected]]
+if.app-id = "com.apple.dt.Xcode"
+run = "move-node-to-workspace 4"
+[[on-window-detected]]
+if.app-id = "notion.id"
+run = "move-node-to-workspace N"
 [[on-window-detected]]
 if.app-id = "org.videolan.vlc"
 run = ["layout tiling"]

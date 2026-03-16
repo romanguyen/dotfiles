@@ -40,6 +40,12 @@ bindkey "^?" backward-delete-char
 bindkey "^[[3~" delete-char
 
 
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors 'di=1;96:fi=96:ln=96:ex=32:ma=7'
+
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
 alias grep='grep --color=auto'
@@ -47,3 +53,15 @@ alias grep='grep --color=auto'
 source <(fzf --zsh)
 eval "$(fnm env --use-on-cd --shell zsh)"
 
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+# Added by Windsurf
+export PATH="/Users/duongnguyenhoang/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# bun completions
+[ -s "/Users/duongnguyenhoang/.bun/_bun" ] && source "/Users/duongnguyenhoang/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

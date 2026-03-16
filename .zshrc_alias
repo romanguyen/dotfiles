@@ -1,5 +1,3 @@
-# alias algo='nvim ~/muni/4th/ib002_algo/zk'
-# alias algob='cd ~/muni/2nd/ib002_algo/'
 # alias web='cd ~/muni/4th/pb138_weby/'
 # alias weby='cd ~/muni/4th/pb138_weby/pb138-project/apps'
 # alias pro='cd ~/muni/3rd/ib111_programko/'
@@ -8,11 +6,17 @@
 # alias fijava='cd ~/muni/4th/pb162_java/2025-pb162-seminar-project/'
 # alias hwjava='cd ~/muni/4th/pb162_java/hw1-sqlite-hard/'
 alias oscv='cd ~/muni/5th/pb152cv_os_cviko/'
+alias zk='code ~/muni/4th/ib002_algo/zk/lmao/'
 alias go_course='cd ~/muni/5th/pb173_go/'
 alias config='cd ~/.config/'
 alias aero='cd ~/.config/aerospace/; nvim ~/.config/aerospace/aerospace.toml'
 alias thesis='cd ~/muni/5th/bc_thesis/'
 alias swing='cd ~/muni/5th/pb007_swing/swing-01-grupa/'
+alias algo_zk='nvim ~/muni/4th/ib002_algo/zk'
+alias algo='code ~/muni/6th/ib002_algo'
+alias crypto='code ~/muni/6th/pv080_crypto/'
+alias algob1='cd ~/muni/2nd/ib002_algo/'
+alias algob2='cd ~/muni/4th/ib002_algo/'
 
 alias ll='ls -l'
 alias sl='ls'
@@ -30,5 +34,8 @@ alias gds="git diff --staged"
 alias gsh="git stash"
 alias gshp="git stash pop"
 alias gsw="git switch"
+alias gpl="git pull"
+alias gl="git log"
+alias glhf="git log --oneline --graph --decorate --all"
 
 alias codex='npx --yes @openai/codex'
